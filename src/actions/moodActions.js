@@ -14,6 +14,11 @@ export const takeNap = () => ({
 });
 
 export const STUDY = 'STUDY';
-export const study = () => ({
+export const goStudy = () => ({
   type: STUDY
+});
+
+export const GET_DRUNK = 'GET_DRUNK';
+export const getDrunk = () => ({
+  type: GET_DRUNK
 });

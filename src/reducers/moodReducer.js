@@ -1,6 +1,7 @@
-import { DRINK_COFFEE, EAT_SNACK, TAKE_NAP, STUDY } from '../actions/moodActions';
+import { DRINK_COFFEE, EAT_SNACK, TAKE_NAP, STUDY, GET_DRUNK } from '../actions/moodActions';
 
-const initialState = { coffees:0, snacks: 0, naps: 0, study: 0 };
+const initialState = { coffees: 0, snacks: 0, naps: 0, study: 0, drunk: 0 };
+  
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case DRINK_COFFEE:
@@ -11,8 +12,9 @@ export default function reducer(state = initialState, action) {
       return { ...state, naps: state.naps + 1 };
     case STUDY:
       return { ...state, study: state.study + 1 };
+    case GET_DRUNK:
+      return { ...state, drunk: state.drunk + 1 };
     default:
       return state;
   }
 }
-
